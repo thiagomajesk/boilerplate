@@ -1,0 +1,16 @@
+@import "tailwindcss" source(none);
+
+/* 
+* Configure sources explicitly 
+*/
+@source "../css";
+@source "../js";
+@source "../../lib/boilerplate_web";
+
+/*
+* Plugins
+*/
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+@import "./phx.css";
