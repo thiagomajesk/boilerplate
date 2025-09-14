@@ -4,24 +4,23 @@ This is a streamlined Phoenix boilerplate designed to serve as a minimal startin
 
 ## Getting Started
 
-### 1. Clone the Repository
+### Clone the Repository
 
 ```bash
-git clone https://thiagomajesk/boilerplate.git your_app_name
+git clone https://github.com/thiagomajesk/boilerplate.git your_app_name
 ```
 
-### 2. Rename the Project
+After cloning the repository, you will want to do some cleanup:
 
-This your_app_name includes the `rename_project` dependency to easily rename the project:
+- Delete the repository metadata: `rm -rf .git`
+- Remove the upstream repository: `git remote remove origin`
+
+### Rename the project
+
+This project includes the `rename_project` dependency. To easily rename the project:
 
 ```bash
 mix rename Boilerplate YourAppName
 ```
 
-### 3. Additional Cleanup
-
-For any remaining occurrences that might have been missed by the rename task, run this command to find them and manually rename them:
-
-```bash
-git grep -ni "boilerplate"
-```
+For any remaining occurrences that might have been missed by the rename mix task, run the following command to find them and manually change them: `git grep -ni "boilerplate"`.
