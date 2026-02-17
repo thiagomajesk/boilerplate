@@ -84,8 +84,7 @@ defmodule BoilerplateWeb do
 
       # HTML escaping functionality
       import Phoenix.HTML
-      # Core UI components
-      import BoilerplateWeb.CoreComponents
+
       # Error helpers
       import Boilerplate.ErrorHelpers
 
