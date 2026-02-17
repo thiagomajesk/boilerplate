@@ -60,7 +60,8 @@ defmodule Boilerplate.MixProject do
       {:dns_cluster, "~> 0.2"},
       {:bandit, "~> 1.8"},
       {:rename_project, "~> 0.1.0", only: :dev},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:web_push_elixir, "~> 0.5.0"}
     ]
   end
 
