@@ -21,9 +21,9 @@ defmodule Boilerplate.ErrorHelpers do
   Adds a new error to the changeset if one does not already exist for the given key.
   """
   def add_new_error(%Ecto.Changeset{} = changeset, key, message) do
-    if not Enum.any?(changeset.errors, &(elem(&1, 0) == key)),
-      do: Ecto.Changeset.add_error(changeset, key, message),
-      else: changeset
+    if Enum.any?(changeset.errors, &(elem(&1, 0) == key)),
+      do: changeset,
+      else: Ecto.Changeset.add_error(changeset, key, message)
   end
 
   @doc """

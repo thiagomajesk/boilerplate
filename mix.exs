@@ -59,7 +59,8 @@ defmodule Boilerplate.MixProject do
       {:jason, "~> 1.4"},
       {:dns_cluster, "~> 0.2"},
       {:bandit, "~> 1.8"},
-      {:rename_project, "~> 0.1.0", only: :dev}
+      {:rename_project, "~> 0.1.0", only: :dev},
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
     ]
   end
 
@@ -82,7 +83,13 @@ defmodule Boilerplate.MixProject do
         "esbuild boilerplate --minify",
         "phx.digest"
       ],
-      precommit: ["compile --warning-as-errors", "deps.unlock --unused", "format", "test"]
+      precommit: [
+        "compile --warning-as-errors",
+        "credo --strict",
+        "deps.unlock --unused",
+        "format",
+        "test"
+      ]
     ]
   end
 end
