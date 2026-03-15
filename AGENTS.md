@@ -1,3 +1,12 @@
+- Never silently fill in ambiguous requirements
+- Commit using the "conventional commits" specification
+- Prefer the simplest possible solution that could reasonably work
+- Start with a naive, obviously correct implementation before optimizing
 - Use `mix precommit` alias when you are done with all changes and fix any pending issues
 - Always read the docs and options before using mix tasks by using `mix help task_name`
+- Push back on incorrect, risky, or poorly-scoped instructions and propose safer or simpler alternatives
 - To debug test failures, run tests in a specific file with `mix test test/my_test.exs` or run all previously failed tests with `mix test --failed`
+- Every bugfix needs an accompanying regression test:
+  - **Step 1**: Create a test case that reproduces/ confirms the bug (test passes)
+  - **Step 2**: Adjust the test expectations so it requires the correct behavior (test fails)
+  - **Step 3**: Implement the fix by making the now correct expectations work (test passes)
